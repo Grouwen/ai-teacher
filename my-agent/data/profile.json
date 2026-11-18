@@ -1,0 +1,14 @@
+{
+  "coding_exp": "有经验",
+  "mastery": 5,
+  "daily_hours": 1.0,
+  "goal": "完成一个super agent的架构的agent项目",
+  "level": "L3",
+  "sources": {
+    "coding_exp": "form",
+    "mastery": "form",
+    "daily_hours": "form",
+    "goal": "form"
+  },
+  "saved_at": "2026-11-18T21:48:22+08:00"
+}

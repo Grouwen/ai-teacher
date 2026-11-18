@@ -1,0 +1,126 @@
+[
+  {
+    "file": "study.png",
+    "target": "http://127.0.0.1:8001/study",
+    "name": "study",
+    "state": null,
+    "size": "1440x900",
+    "zoom": 1,
+    "animationWaitMs": 0,
+    "issues": [],
+    "lint": [
+      {
+        "rule": "tightLeading",
+        "label": "多行正文行高过紧",
+        "count": 15,
+        "examples": [
+          "p#lesson-objective「本章目标：本章目标是让你能独立写出并跑通一个调用」（1.20）",
+          "p「结论先行：先装好 Python 3.9+，再用虚」（1.20）",
+          "p「结论先行：API Key 是调用 LLM 的凭证」（1.20）"
+        ]
+      },
+      {
+        "rule": "longMeasure",
+        "label": "正文行太长",
+        "count": 14,
+        "examples": [
+          "p#lesson-objective「本章目标：本章目标是让你能独立写出并跑通一个调用」（每行约 49 字）",
+          "p「结论先行：先装好 Python 3.9+，再用虚」（每行约 49 字）",
+          "p「结论先行：API Key 是调用 LLM 的凭证」（每行约 49 字）"
+        ]
+      },
+      {
+        "rule": "contrastLow",
+        "label": "文字对比度不达标（正文低于 4.5:1，大字低于 3:1）",
+        "count": 1,
+        "examples": [
+          "footer「本地应用 · 数据存于 data/ 目录 · 单」（4.50:1）"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "plan.png",
+    "target": "http://127.0.0.1:8001/plan",
+    "name": "plan",
+    "state": null,
+    "size": "1440x900",
+    "zoom": 1,
+    "animationWaitMs": 0,
+    "issues": [
+      "加载错误：Failed to load resource: the server responded with a status of 502 (Bad Gateway) http://127.0.0.1:8001/api/plan/draft"
+    ],
+    "lint": [
+      {
+        "rule": "contrastLow",
+        "label": "文字对比度不达标（正文低于 4.5:1，大字低于 3:1）",
+        "count": 1,
+        "examples": [
+          "footer「本地应用 · 数据存于 data/ 目录 · 单」（4.50:1）"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "progress.png",
+    "target": "http://127.0.0.1:8001/progress",
+    "name": "progress",
+    "state": null,
+    "size": "1440x900",
+    "zoom": 1,
+    "animationWaitMs": 0,
+    "issues": [],
+    "lint": [
+      {
+        "rule": "contrastLow",
+        "label": "文字对比度不达标（正文低于 4.5:1，大字低于 3:1）",
+        "count": 1,
+        "examples": [
+          "footer「本地应用 · 数据存于 data/ 目录 · 单」（4.50:1）"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "sheet.png",
+    "width": 2000,
+    "height": 2048,
+    "columns": 3,
+    "items": [
+      {
+        "naturalWidth": 1440,
+        "naturalHeight": 4429,
+        "width": 640,
+        "height": 1968,
+        "labelHeight": 32,
+        "x": 24,
+        "y": 24,
+        "label": "study",
+        "labelY": 2000
+      },
+      {
+        "naturalWidth": 1440,
+        "naturalHeight": 900,
+        "width": 640,
+        "height": 400,
+        "labelHeight": 32,
+        "x": 680,
+        "y": 24,
+        "label": "plan",
+        "labelY": 432
+      },
+      {
+        "naturalWidth": 1440,
+        "naturalHeight": 900,
+        "width": 640,
+        "height": 400,
+        "labelHeight": 32,
+        "x": 1336,
+        "y": 24,
+        "label": "progress",
+        "labelY": 432
+      }
+    ],
+    "issues": []
+  }
+]

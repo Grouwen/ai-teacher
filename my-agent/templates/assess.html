@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}摸底访谈 · AI教学员{% endblock %}
+{% block content %}
+<div class="assess-page">
+  <header class="assess-head">
+    <h1 class="display">先摸清<br>你的起点</h1>
+  </header>
+
+  <form id="assess-form" class="sheet">
+    <div class="sheet-head">
+      <span class="sheet-label">入学登记</span>
+      <span class="sheet-meta">约两分钟</span>
+    </div>
+
+    <fieldset class="field">
+      <legend>编程经验</legend>
+      <div class="choice-row">
+        <label class="choice">
+          <input type="radio" name="coding_exp" value="零基础" required>
+          <span><b>零基础</b><small>没写过代码</small></span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="coding_exp" value="入门">
+          <span><b>入门</b><small>写过一些</small></span>
+        </label>
+        <label class="choice">
+          <input type="radio" name="coding_exp" value="有经验">
+          <span><b>有经验</b><small>能独立写程序</small></span>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="field">
+      <legend>掌握程度</legend>
+      <div class="option-list">
+        <label class="option">
+          <input type="radio" name="mastery" value="1" required>
+          <span class="opt-inner">
+            <span class="opt-no">1</span>
+            <span class="opt-text"><b>完全没写过代码</b><small>从变量和循环开始</small></span>
+          </span>
+        </label>
+        <label class="option">
+          <input type="radio" name="mastery" value="2">
+          <span class="opt-inner">
+            <span class="opt-no">2</span>
+            <span class="opt-text"><b>会照抄示例改一改</b><small>能跑起来，但说不清为什么</small></span>
+          </span>
+        </label>
+        <label class="option">
+          <input type="radio" name="mastery" value="3">
+          <span class="opt-inner">
+            <span class="opt-no">3</span>
+            <span class="opt-text"><b>能独立写小脚本或函数</b><small>遇到报错会查资料</small></span>
+          </span>
+        </label>
+        <label class="option">
+          <input type="radio" name="mastery" value="4">
+          <span class="opt-inner">
+            <span class="opt-no">4</span>
+            <span class="opt-text"><b>能查文档完成中型程序</b><small>会拆分模块，能调试</small></span>
+          </span>
+        </label>
+        <label class="option">
+          <input type="radio" name="mastery" value="5">
+          <span class="opt-inner">
+            <span class="opt-no">5</span>
+            <span class="opt-text"><b>熟练，能排查复杂问题</b><small>关注架构与工程取舍</small></span>
+          </span>
+        </label>
+      </div>
+    </fieldset>
+
+    <label class="field">
+      <span class="field-label">每日可投入</span>
+      <span class="input-suffix">
+        <input type="number" name="daily_hours" min="0.5" step="0.5" value="1" required inputmode="decimal">
+        <span>小时</span>
+      </span>
+    </label>
+
+    <label class="field">
+      <span class="field-label">学习目标</span>
+      <textarea name="goal" rows="3" maxlength="300"
+        placeholder="例：做一个能调用模型和工具的助手"></textarea>
+    </label>
+
+    <button type="submit" id="assess-btn" class="btn btn-primary btn-block">
+      生成学习规划 <span class="btn-arrow" aria-hidden="true">→</span>
+    </button>
+  </form>
+
+  <section id="assess-result" class="result hidden" aria-live="polite"></section>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191612">
+  <meta name="description" content="AI 教学员：摸底、规划、讲解、练习与批改，本地单用户学习应用">
+  <title>{% block title %}AI教学员{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-page="{{ request.url.path }}">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="shell">
+    <aside class="rail">
+      <a class="brand" href="/" aria-label="AI教学员首页">
+        <span class="brand-mark" aria-hidden="true">学</span>
+        <span class="brand-text">
+          <strong>AI教学员</strong>
+          <small>私人课程</small>
+        </span>
+      </a>
+
+      <nav class="steps" aria-label="主导航">
+        <a href="/assess"><span class="step-no">01</span><span class="step-name">摸底</span></a>
+        <a href="/plan"><span class="step-no">02</span><span class="step-name">规划</span></a>
+        <a href="/study"><span class="step-no">03</span><span class="step-name">学习</span></a>
+        <a href="/progress"><span class="step-no">04</span><span class="step-name">进度</span></a>
+      </nav>
+
+      <div class="rail-foot">
+        <span class="state-pill" id="state-badge" data-state="idle"><i aria-hidden="true"></i><span>读取中</span></span>
+        <p class="rail-note">数据在本机 data/ 目录<br>单用户 · 不联网</p>
+      </div>
+    </aside>
+
+    <div class="page">
+      <main id="main">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script src="/static/app.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

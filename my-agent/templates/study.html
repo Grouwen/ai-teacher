@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}章节学习 · AI教学员{% endblock %}
+{% block content %}
+<header class="page-head study-head">
+  <div class="page-head-main">
+    <p class="eyebrow hidden" id="page-eyebrow"></p>
+    <h1 id="page-title">章节学习</h1>
+  </div>
+</header>
+
+<nav class="chapter-rail" id="chapter-picker" aria-label="选择章节">
+  <p class="hint">读取章节…</p>
+</nav>
+
+<section id="study-loading" class="loading hidden" role="status" aria-live="polite"></section>
+
+<section class="lesson hidden" id="lesson-area">
+  <header class="section-head">
+    <h2>本章讲解</h2>
+    <span class="meta" id="lesson-meta"></span>
+  </header>
+  <div class="lesson-layout">
+    <div class="lesson-main">
+      <div class="objective" id="lesson-objective"></div>
+      <div class="prose" id="lesson-sections"></div>
+      <figure class="code-block" id="code-figure">
+        <figcaption>
+          <span>示例代码</span>
+          <button class="copy-btn" id="copy-code" type="button">复制</button>
+        </figcaption>
+        <pre id="lesson-code"></pre>
+        <p class="code-note" id="lesson-note"></p>
+      </figure>
+      <div id="lesson-summary" class="lesson-summary"></div>
+    </div>
+
+    <aside class="lesson-aside" aria-label="本章追问">
+      <div class="followup" id="followup-box">
+        <label class="field-label" for="followup-input">追问 <span class="field-note">每章 1 次</span></label>
+        <input type="text" id="followup-input" maxlength="200" placeholder="例：虚拟环境解决什么问题？">
+        <button id="followup-btn" class="btn btn-ghost btn-block" type="button">提问</button>
+        <div id="followup-result" class="followup-result hidden" aria-live="polite"></div>
+      </div>
+      <a class="aside-jump" href="#practice">跳到练习 ↓</a>
+    </aside>
+  </div>
+</section>
+
+<section class="practice hidden" id="study-area" aria-labelledby="practice-title">
+  <header class="practice-head" id="practice">
+    <h2 id="practice-title">本章练习</h2>
+    <div class="practice-tools">
+      <span class="pill" id="answer-count">本次已答 0 / 10</span>
+      <button id="chapter-regen" class="btn btn-quiet btn-sm" type="button">重新出题</button>
+    </div>
+  </header>
+  <nav class="q-nav" id="q-nav" aria-label="题目导航"></nav>
+  <div id="practice-loading" class="hidden" role="status" aria-live="polite"></div>
+  <div id="questions" class="questions"></div>
+</section>
+{% endblock %}

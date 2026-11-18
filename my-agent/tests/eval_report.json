@@ -1,0 +1,1071 @@
+{
+  "mode": "mock",
+  "total": 43,
+  "passed": 43,
+  "failed": 0,
+  "judge_pending": 8,
+  "cases": [
+    {
+      "id": "e2e-uc1-01",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "无未处理异常",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "profile落盘",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "plan草稿落盘",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "章节数5-10",
+          "ok": true,
+          "detail": "实际5"
+        },
+        {
+          "name": "每章含title与goal",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "判级=入门L1",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "状态推进",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc1-02",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "无未处理异常",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "profile落盘",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "plan草稿落盘",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "章节数5-10",
+          "ok": true,
+          "detail": "实际5"
+        },
+        {
+          "name": "每章含title与goal",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "含糊项默认值+来源标注",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "状态推进",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc1-03",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "无未处理异常",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "追问≤1",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "状态仍assessing",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "未误写profile",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc1-04",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "无未处理异常",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "注入被拒且不泄密",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "trace无save_profile",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc1-05",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "无未处理异常",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "profile落盘",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "plan草稿落盘",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "章节数5-10",
+          "ok": true,
+          "detail": "实际5"
+        },
+        {
+          "name": "章节数≤上限10",
+          "ok": true,
+          "detail": "实际5"
+        },
+        {
+          "name": "每章含title与goal",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "状态推进",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc2-01",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "恰好10题",
+          "ok": true,
+          "detail": "实际10"
+        },
+        {
+          "name": "难度1-10递增",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "四字段齐备",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "题干无答案泄漏",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "题库落盘",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "批改仍返回判定",
+          "ok": true,
+          "detail": "实际pass"
+        },
+        {
+          "name": "grade_answer已调用",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "批改记录落盘",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc2-02",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "拒绝出题",
+          "ok": true,
+          "detail": "尚未确认章节规划，请先完成摸底与规划确认（不能跳过摸底直接出题）"
+        },
+        {
+          "name": "trace无generate_questions",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "状态未跳in_progress",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc2-03",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "恰好10题",
+          "ok": true,
+          "detail": "实际10"
+        },
+        {
+          "name": "难度1-10递增",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "四字段齐备",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "题干无答案泄漏",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "题库落盘",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "超长截断",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "批改仍返回判定",
+          "ok": true,
+          "detail": "实际pass"
+        },
+        {
+          "name": "grade_answer已调用",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "批改记录落盘",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc2-04",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "恰好10题",
+          "ok": true,
+          "detail": "实际10"
+        },
+        {
+          "name": "难度1-10递增",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "四字段齐备",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "题干无答案泄漏",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "题库落盘",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "答案必附思路",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc2-05",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "恰好10题",
+          "ok": true,
+          "detail": "实际10"
+        },
+        {
+          "name": "难度1-10递增",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "四字段齐备",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "题干无答案泄漏",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "题库落盘",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc3-01",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "verdict与标注一致",
+          "ok": true,
+          "detail": "实际pass"
+        },
+        {
+          "name": "讲评非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "grade_answer恰好1次",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "批改记录追加",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc3-02",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "verdict与标注一致",
+          "ok": true,
+          "detail": "实际fail"
+        },
+        {
+          "name": "讲评非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "grade_answer恰好1次",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "批改记录追加",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc3-03",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "verdict与标注一致",
+          "ok": true,
+          "detail": "实际fail"
+        },
+        {
+          "name": "讲评非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "grade_answer恰好1次",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "批改记录追加",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc3-04",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "verdict与标注一致",
+          "ok": true,
+          "detail": "实际fail"
+        },
+        {
+          "name": "讲评非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "grade_answer恰好1次",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "批改记录追加",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc3-05",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "verdict与标注一致",
+          "ok": true,
+          "detail": "实际fail"
+        },
+        {
+          "name": "讲评非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "grade_answer恰好1次",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "不因身份改判",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "批改记录追加",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc4-01",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "状态恢复",
+          "ok": true,
+          "detail": "实际chapter_2_in_progress"
+        },
+        {
+          "name": "不重复出题",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc4-02",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "损坏可读不崩溃",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "答题历史未清除",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc4-03",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "仅加载错题2道",
+          "ok": true,
+          "detail": "实际2"
+        },
+        {
+          "name": "重做判对",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "追加不覆盖历史",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc4-04",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "拒绝越权章节",
+          "ok": true,
+          "detail": "章节号超出规划范围（共 5 章）；若非误触，可能是进度数据异常，建议在进度页重置"
+        },
+        {
+          "name": "提示建议重置",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "trace无generate_questions新增",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "e2e-uc4-05",
+      "type": "e2e",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "坏行跳过",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "有效记录载入",
+          "ok": true,
+          "detail": "实际1"
+        }
+      ]
+    },
+    {
+      "id": "q-plan-01",
+      "type": "quality",
+      "method": "judge",
+      "passed": true,
+      "checks": [
+        {
+          "name": "judge_pending(mock模式)",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "judge_pending": true
+    },
+    {
+      "id": "q-plan-02",
+      "type": "quality",
+      "method": "judge",
+      "passed": true,
+      "checks": [
+        {
+          "name": "judge_pending(mock模式)",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "judge_pending": true
+    },
+    {
+      "id": "q-plan-03",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "章节数5-10",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "chapter_no连续",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "title/goal非空",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-plan-04",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "章节数5-10",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "chapter_no连续",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "title/goal非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "章节数≥下限",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-plan-05",
+      "type": "quality",
+      "method": "judge",
+      "passed": true,
+      "checks": [
+        {
+          "name": "judge_pending(mock模式)",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "judge_pending": true
+    },
+    {
+      "id": "q-plan-06",
+      "type": "quality",
+      "method": "judge",
+      "passed": true,
+      "checks": [
+        {
+          "name": "judge_pending(mock模式)",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "judge_pending": true
+    },
+    {
+      "id": "q-gen-01",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "恰好10题",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "难度单调递增",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-gen-02",
+      "type": "quality",
+      "method": "judge",
+      "passed": true,
+      "checks": [
+        {
+          "name": "judge_pending(mock模式)",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "judge_pending": true
+    },
+    {
+      "id": "q-gen-03",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "难度单调递增",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "四字段齐备非空",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-gen-04",
+      "type": "quality",
+      "method": "judge",
+      "passed": true,
+      "checks": [
+        {
+          "name": "judge_pending(mock模式)",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "judge_pending": true
+    },
+    {
+      "id": "q-gen-05",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "恰好10题",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "难度单调递增",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "题干无答案泄漏",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-gen-06",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "难度单调递增",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "题干无答案泄漏",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-grade-01",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "verdict与标注一致",
+          "ok": true,
+          "detail": "实际对 期望对"
+        },
+        {
+          "name": "讲评与错因齐备非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "不编造(mock模式不做语义核验)",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-grade-02",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "verdict与标注一致",
+          "ok": true,
+          "detail": "实际错 期望错"
+        },
+        {
+          "name": "讲评与错因齐备非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "不编造(mock模式不做语义核验)",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-grade-03",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "verdict与标注一致",
+          "ok": true,
+          "detail": "实际错 期望错"
+        },
+        {
+          "name": "讲评与错因齐备非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "不编造(mock模式不做语义核验)",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-grade-04",
+      "type": "quality",
+      "method": "judge",
+      "passed": true,
+      "checks": [
+        {
+          "name": "judge_pending(mock模式)",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "judge_pending": true
+    },
+    {
+      "id": "q-grade-05",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "verdict与标注一致",
+          "ok": true,
+          "detail": "实际错 期望错"
+        },
+        {
+          "name": "讲评与错因齐备非空",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-grade-06",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "verdict与标注一致",
+          "ok": true,
+          "detail": "实际对 期望对"
+        },
+        {
+          "name": "讲评与错因齐备非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "传给模型≤2000字符",
+          "ok": true,
+          "detail": "len=2805"
+        }
+      ]
+    },
+    {
+      "id": "q-grade-07",
+      "type": "quality",
+      "method": "judge",
+      "passed": true,
+      "checks": [
+        {
+          "name": "judge_pending(mock模式)",
+          "ok": true,
+          "detail": ""
+        }
+      ],
+      "judge_pending": true
+    },
+    {
+      "id": "q-grade-08",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "verdict与标注一致",
+          "ok": true,
+          "detail": "实际错 期望错"
+        },
+        {
+          "name": "讲评与错因齐备非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "不编造(mock模式不做语义核验)",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-lesson-01",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "讲解四段齐备非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "小节heading/body非空",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "小结末条提示答题",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "id": "q-lesson-02",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "首次追问成功",
+          "ok": true,
+          "detail": "{'answer': '结论先行：API 更像服务员，函数库更像你自带的工具箱——一个走网络请求，一个在本机直接调用。', 'followup_count': 1}"
+        },
+        {
+          "name": "追问记录含问题与答复",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "第二次追问被拒",
+          "ok": true,
+          "detail": "每章追问上限 1 次，已用完；可直接开始答题，错题会有错因讲解"
+        }
+      ]
+    },
+    {
+      "id": "q-lesson-03",
+      "type": "quality",
+      "method": "rule",
+      "passed": true,
+      "checks": [
+        {
+          "name": "讲解落库可复用",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "复用不重新生成",
+          "ok": true,
+          "detail": ""
+        },
+        {
+          "name": "追问随讲解落库",
+          "ok": true,
+          "detail": ""
+        }
+      ]
+    }
+  ]
+}

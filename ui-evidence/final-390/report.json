@@ -1,0 +1,116 @@
+[
+  {
+    "file": "assess.png",
+    "target": "http://127.0.0.1:8001/assess",
+    "name": "assess",
+    "state": null,
+    "size": "390x844",
+    "zoom": 1,
+    "animationWaitMs": 0,
+    "issues": [],
+    "lint": []
+  },
+  {
+    "file": "plan.png",
+    "target": "http://127.0.0.1:8001/plan",
+    "name": "plan",
+    "state": null,
+    "size": "390x844",
+    "zoom": 1,
+    "animationWaitMs": 91,
+    "issues": [],
+    "lint": []
+  },
+  {
+    "file": "study.png",
+    "target": "http://127.0.0.1:8001/study",
+    "name": "study",
+    "state": null,
+    "size": "390x844",
+    "zoom": 1,
+    "animationWaitMs": 139,
+    "issues": [],
+    "lint": [
+      {
+        "rule": "eyebrow",
+        "label": "标题上方的眉标",
+        "count": 1,
+        "examples": [
+          "p#page-eyebrow.eyebrow「第 1 章 · 共 9 章」"
+        ]
+      },
+      {
+        "rule": "sideStripe",
+        "label": "彩色单侧边线",
+        "count": 1,
+        "examples": [
+          "div#lesson-objective.objective「本章目标 本章目标是让你能独立写出并跑通一个调用」（2px）"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "progress.png",
+    "target": "http://127.0.0.1:8001/progress",
+    "name": "progress",
+    "state": null,
+    "size": "390x844",
+    "zoom": 1,
+    "animationWaitMs": 79,
+    "issues": [],
+    "lint": []
+  },
+  {
+    "file": "sheet.png",
+    "width": 1656,
+    "height": 7570,
+    "columns": 4,
+    "items": [
+      {
+        "naturalWidth": 390,
+        "naturalHeight": 1269,
+        "width": 390,
+        "height": 1269,
+        "labelHeight": 32,
+        "x": 24,
+        "y": 24,
+        "label": "assess",
+        "labelY": 1301
+      },
+      {
+        "naturalWidth": 390,
+        "naturalHeight": 2816,
+        "width": 390,
+        "height": 2816,
+        "labelHeight": 32,
+        "x": 430,
+        "y": 24,
+        "label": "plan",
+        "labelY": 2848
+      },
+      {
+        "naturalWidth": 390,
+        "naturalHeight": 7490,
+        "width": 390,
+        "height": 7490,
+        "labelHeight": 32,
+        "x": 836,
+        "y": 24,
+        "label": "study",
+        "labelY": 7522
+      },
+      {
+        "naturalWidth": 390,
+        "naturalHeight": 1586,
+        "width": 390,
+        "height": 1586,
+        "labelHeight": 32,
+        "x": 1242,
+        "y": 24,
+        "label": "progress",
+        "labelY": 1618
+      }
+    ],
+    "issues": []
+  }
+]

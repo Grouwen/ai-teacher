@@ -1,0 +1,37 @@
+{
+  "1": {
+    "generated_at": "2026-11-18T21:49:19+08:00",
+    "content": {
+      "objective": "本章目标：能说清一次 LLM API 调用从发出到拿到回复的完整链路，并亲手写出、跑通一个「发一条消息、拿回一段文本」的最小 Python 脚本。学完你能独立完成第一次真实调用，并看懂返回结果里每个字段的含义。",
+      "sections": [
+        {
+          "heading": "一、API 与 LLM API 到底在做什么",
+          "body": "结论：LLM API 本质是「你把一段文本发给远端模型，它把生成的文本发回给你」的一次 HTTP 请求。API（就像餐厅服务员：你点单，它把请求转给厨房，再把菜端回给你）负责在你和模型之间传递消息。你不需要本地有显卡，模型跑在服务商机房里，你只负责发请求、解析响应。对已有编程经验的你，直接把它理解为一个「输入 messages 数组、输出一段文本」的远程函数即可。关键差异是：它是无状态的，模型不记得你上一次说了什么，上下文要你自己每次带上。"
+        },
+        {
+          "heading": "二、三个必填要素：密钥、模型名、消息",
+          "body": "结论：一次调用至少要给对三样东西——API Key、模型名、messages。API Key（就像门禁卡：证明你有权限进这栋楼）通常从环境变量读取，绝不写死在代码里、绝不提交到 Git。模型名决定你调用哪个模型，写错会直接报 404 类错误。messages 是一个数组，每条含 role 和 content：role 为 system 时设定模型的行为风格，为 user 时是你的输入，为 assistant 时是模型的历史回复。易错点：很多人把 messages 写成单个字符串，接口会拒绝。"
+        },
+        {
+          "heading": "三、请求与响应的结构，以及必须处理的异常",
+          "body": "结论：调用要包在异常处理里，并显式设置超时，否则网络抖动会让程序卡死。响应体里你主要关心两个位置：模型生成的文本在 choices[0].message.content，token 用量在 usage 字段。token（就像按字数计费的计价单位：模型按它切分文本，也按它收费）决定你的成本，输入和输出分别计。常见错误要能区分：401 是密钥无效，429 是频率或额度超限，5xx 是服务端问题——处理策略不同，401 改配置，429 退避重试。"
+        },
+        {
+          "heading": "四、最小可用脚本的写法顺序",
+          "body": "结论：先跑通「能拿到回复」，再谈封装。顺序是：读密钥 → 建客户端 → 组装 messages → 发请求 → 取 content 打印。建议第一版不要加任何抽象层，直接调用官方 SDK，让报错信息最原始、最好排查。跑通后再把「调用」抽成一个函数，为后续章节的多轮对话和工具调用留出接口。易错点：把密钥打印到日志里、把整个响应对象直接当字符串用，这两点在有经验的人里也常犯。"
+        }
+      ],
+      "example_code": "import os\nfrom openai import OpenAI\n\nclient = OpenAI(\n    api_key=os.environ[\"OPENAI_API_KEY\"],\n    timeout=30,\n)\n\nmessages = [\n    {\"role\": \"system\", \"content\": \"你是一个简洁的助手。\"},\n    {\"role\": \"user\", \"content\": \"用一句话解释什么是 API。\"},\n]\n\ntry:\n    resp = client.chat.completions.create(\n        model=\"gpt-4o-mini\",\n        messages=messages,\n    )\n    print(resp.choices[0].message.content)\n    print(\"tokens:\", resp.usage.total_tokens)\nexcept Exception as e:\n    print(\"调用失败:\", type(e).__name__, e)\n",
+      "example_note": "1) 密钥从环境变量读取，代码里不出现明文。\n2) messages 是数组，system 定风格、user 是本次输入。\n3) 响应文本在 choices[0].message.content，用量在 usage。\n4) 整段包在 try 里并设了 timeout，失败时能看清错误类型。",
+      "summary": [
+        "LLM API 是无状态的远程函数：每次调用都要自己带全上下文。",
+        "三要素缺一不可：API Key（从环境变量读）、模型名、messages 数组。",
+        "响应取 choices[0].message.content，成本看 usage 里的 token 数。",
+        "必须设 timeout 并做异常处理，区分 401、429、5xx 三类错误。",
+        "接下来用 10 道题检验，错题会有错因讲解。"
+      ]
+    },
+    "followups": [],
+    "followup_count": 0
+  }
+}
